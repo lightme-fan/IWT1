@@ -33,6 +33,10 @@ img {
 .easybank_header__title {
   margin: 0; }
 
+.easybank_header__title-logo {
+  color: #000;
+  text-transform: lowercase; }
+
 .easybank_header__nav {
   position: absolute;
   width: 80%;
@@ -87,4 +91,24 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
   background-image: url("../images/bg-intro-mobile.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: 4% -14%;
+  background-size: 100%; }
+
+.banking_container {
+  padding: 1rem;
+  text-align: center; }
+
+.banking_content__heading {
+  font-size: 45px; }
+
+.banking_content__desc {
+  opacity: 0.5; }
+
+.banking_request-btn {
+  background: #31d35c;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 45px;
+  color: #fff;
+  margin-top: 1rem; }

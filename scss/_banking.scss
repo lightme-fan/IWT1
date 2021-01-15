@@ -2,4 +2,28 @@
 
 .banking {
     @include background('../images/bg-intro-mobile.svg');
+    background-position: 4% -14%;
+    background-size: 100%;
+}
+
+.banking_container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.banking_content__heading {
+    font-size: 45px;
+}
+
+.banking_content__desc {
+    opacity: 0.5
+}
+
+.banking_request-btn {
+    background: hsl(136, 65%, 51%);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 45px;
+    color: #fff;
+    margin-top: 1rem;
 }
