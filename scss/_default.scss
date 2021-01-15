@@ -1,3 +1,8 @@
+body {
+    position: relative;
+    margin: 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -9,4 +14,13 @@ a {
 
 img {
     width: 100%;
+}
+
+.container {
+    max-width: 1114px;
+    margin: auto;
+}
+
+.checkbox {
+    visibility: hidden; 
 }
