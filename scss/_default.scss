@@ -1,6 +1,9 @@
+@import 'font_faces';
+
 body {
     position: relative;
     margin: 0;
+    font-family: 'Public Sans';
 }
 
 ul {
@@ -23,4 +26,8 @@ img {
 
 .checkbox {
     visibility: hidden; 
+}
+
+button {
+    cursor: pointer;
 }

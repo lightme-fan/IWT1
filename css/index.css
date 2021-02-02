@@ -1,6 +1,21 @@
+@font-face {
+  font-family: 'Public Sans';
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"), url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url("../fonts/PublicSans-Bold.woff2") format("woff2"), url("../fonts/PublicSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
 body {
   position: relative;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Public Sans'; }
 
 ul {
   list-style: none;
@@ -18,6 +33,9 @@ img {
 
 .checkbox {
   visibility: hidden; }
+
+button {
+  cursor: pointer; }
 
 .easybank_header {
   margin-top: -2rem;
