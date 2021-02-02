@@ -182,7 +182,7 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
 .banking_mockups {
   position: absolute;
   left: 0;
-  top: -1%; }
+  top: 2%; }
 
 @media (min-width: calc(375px * 2)) {
   .banking {
@@ -202,11 +202,7 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
     gap: 10%; }
   .banking_mockups {
     position: unset;
-    transform: translateY(-142px);
-    -webkit-transform: translateY(-142px);
-    -moz-transform: translateY(-142px);
-    -ms-transform: translateY(-142px);
-    -o-transform: translateY(-142px);
+    transform: translateY(-15px);
     grid-area: mockup; }
   .banking_content {
     grid-area: banking_content;
