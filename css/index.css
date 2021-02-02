@@ -21,7 +21,8 @@ img {
 
 .easybank_header {
   margin-top: -2rem;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  z-index: 2; }
 
 .easybank_header__container {
   display: flex;
@@ -29,6 +30,14 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem; }
+  .easybank_header__container .requesting {
+    display: none;
+    background: #31d35c;
+    border: none;
+    border-radius: 45px;
+    color: #fff;
+    width: 15%;
+    padding: 10px 0; }
 
 .easybank_header__title {
   margin: 0; }
@@ -50,7 +59,11 @@ img {
   box-shadow: -2px 4px 5px -4px #000000;
   border-radius: 8px;
   transform: translateX(-130%);
-  transition: transform .2s; }
+  transition: transform .2s;
+  -webkit-transform: translateX(-130%);
+  -moz-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  -o-transform: translateX(-130%); }
 
 .easybank_header__nav-ul {
   margin: 0;
@@ -63,17 +76,23 @@ img {
   color: #000; }
 
 .easybank_header__menu {
+  display: block;
   background-image: url("../svg/menu.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 29px 43px;
+  background-position: 100% 50%;
   color: transparent;
   cursor: pointer; }
 
 input[type="checkbox"]:checked ~ .easybank_header .easybank_header__nav {
   transform: translateX(0%);
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%); }
 
 body ~ input[type="checkbox"]:checked {
   z-index: 1;
@@ -84,8 +103,36 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 100% 50%;
   background-size: 29px 43px;
   cursor: pointer; }
+
+@media (min-width: calc(375px * 2)) {
+  .easybank_header__menu {
+    display: none; }
+  .easybank_header__nav {
+    position: unset;
+    display: flex;
+    justify-content: center;
+    transform: unset;
+    box-shadow: none;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+    .easybank_header__nav .easybank_header__nav-ul {
+      display: flex;
+      margin: 0;
+      padding: 0; }
+  .easybank_header__container .requesting {
+    display: block; } }
+
+.easybank_main {
+  z-index: 1; }
 
 .banking {
   background-image: url("../images/bg-intro-mobile.svg");
@@ -97,7 +144,8 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
 
 .banking_container {
   padding: 1rem;
-  text-align: center; }
+  text-align: center;
+  padding-top: 86%; }
 
 .banking_content__heading {
   font-size: 45px; }
@@ -112,3 +160,143 @@ input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .e
   border-radius: 45px;
   color: #fff;
   margin-top: 1rem; }
+
+.banking_mockups {
+  position: absolute;
+  left: 0;
+  top: -1%; }
+
+@media (min-width: calc(375px * 2)) {
+  .banking {
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 265% -102px;
+    background-repeat: no-repeat;
+    background-size: 89% 87%; }
+  .banking_container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    text-align: start;
+    grid-template-areas: "banking_content mockup";
+    gap: 10%; }
+  .banking_mockups {
+    position: unset;
+    transform: translateY(-142px);
+    -webkit-transform: translateY(-142px);
+    -moz-transform: translateY(-142px);
+    -ms-transform: translateY(-142px);
+    -o-transform: translateY(-142px);
+    grid-area: mockup; }
+  .banking_content {
+    grid-area: banking_content;
+    padding-right: 4rem; } }
+
+.opening_account {
+  background: #fafafa; }
+
+.opening_account__container {
+  padding: 1rem;
+  text-align: center; }
+
+.opening_account__heading {
+  font-size: 42px; }
+
+.account_name {
+  font-size: 28px; }
+
+.opening_account__preface,
+.account_desc {
+  opacity: 0.5; }
+
+.logo {
+  width: 80px; }
+
+@media (min-width: calc(375px * 2)) {
+  .opening_account__container {
+    text-align: start; }
+  .account {
+    padding: 34px 0;
+    display: flex;
+    gap: 7%; }
+  .opening_account__preface {
+    padding-right: 54%; } }
+
+.articles {
+  padding-top: 5rem;
+  text-align: center; }
+
+.articles_container {
+  padding: 1rem; }
+
+.article_img {
+  border-radius: 7px; }
+
+.articles_ul__list {
+  text-align: start; }
+
+.article_desc {
+  opacity: 0.4;
+  padding: 0 2rem; }
+
+@media (min-width: calc(375px * 2)) {
+  .articles_container .articles_heading {
+    text-align: start;
+    padding-bottom: 2rem; }
+  .articles_container .articles_ul {
+    display: flex;
+    gap: 2%; }
+    .articles_container .articles_ul .article_img {
+      height: 200px;
+      padding-bottom: 1rem; } }
+
+.easybank_footer {
+  background-color: #2d314d;
+  text-align: center;
+  padding: 1rem; }
+  .easybank_footer .copyright {
+    color: #fff; }
+
+.easybank_media__list--icon {
+  color: #fff; }
+
+.easybank_media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0; }
+
+.media_icon {
+  width: 24px; }
+
+.easybank_footer__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+  .easybank_footer__ul .easybank_footer__ul--li_anchor {
+    color: #fff; }
+
+@media (min-width: calc(375px * 2)) {
+  .easybank_footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%; }
+    .easybank_footer__container .footer_about {
+      justify-self: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .easybank_footer__container .footer_invite {
+      justify-self: end;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 1rem; }
+  .easybank_footer__ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+    gap: 5%;
+    row-gap: 50%; } }

@@ -1,0 +1,9 @@
+.articles {
+  padding-top: 5rem;
+  text-align: center; }
+
+.articles_container {
+  padding: 1rem; }
+
+.article_img {
+  border-radius: 7px; }

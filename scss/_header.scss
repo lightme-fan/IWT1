@@ -3,12 +3,23 @@
 .easybank_header {
     margin-top: -2rem;
     padding: 1rem 0;
+    z-index: 2;
 }
 
 .easybank_header__container {
     @include displayFlex;
     align-items: center;
     padding: 1rem;
+
+    .requesting {
+        display: none;
+        background: hsl(136, 65%, 51%);
+        border: none;
+        border-radius: 45px;
+        color: #fff;
+        width: 15%;
+        padding: 10px 0;
+    }
 }
 
 
@@ -35,6 +46,10 @@
     border-radius: 8px;
     transform: translateX(-130%);
     transition: transform .2s;
+    -webkit-transform: translateX(-130%);
+    -moz-transform: translateX(-130%);
+    -ms-transform: translateX(-130%);
+    -o-transform: translateX(-130%);
 }
 
 .easybank_header__nav-ul {
@@ -50,8 +65,10 @@
 }
 
 .easybank_header__menu {
+    display: block;
     @include background('../svg/menu.svg');
     background-size: 29px 43px;
+    background-position: 100% 50%;
     color: transparent;
     cursor: pointer;
 }
@@ -59,6 +76,10 @@
 input[type="checkbox"]:checked ~ .easybank_header .easybank_header__nav {
   transform: translateX(0%);
   z-index: 2;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
 }
 
 body ~ input[type="checkbox"]:checked {
@@ -68,6 +89,41 @@ body ~ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked ~ .easybank_header .easybank_header__container .easybank_header__menu {
   @include background('../svg/close.svg');
+    background-position: 100% 50%;
     background-size: 29px 43px;
     cursor: pointer;
+}
+
+@media (min-width: calc(375px * 2)) {
+    .easybank_header__menu {
+        display: none;
+    }
+
+    .easybank_header__nav {
+        position: unset;
+        display: flex;
+        justify-content: center;
+        transform: unset;
+        box-shadow: none;
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        .easybank_header__nav-ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .easybank_header__container {
+        .requesting {
+            display: block;
+        }
+    }
 }

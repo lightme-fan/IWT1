@@ -1,0 +1,44 @@
+@import 'variables/mixin';
+
+.opening_account {
+    background: hsl(0, 0%, 98%);
+}
+
+.opening_account__container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.opening_account__heading {
+    font-size: 42px;
+}
+
+.account_name {
+    font-size: 28px;
+}
+
+.opening_account__preface, 
+.account_desc {
+    opacity: 0.5;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+@media (min-width: calc(375px * 2)) {
+    .opening_account__container {
+        text-align: start;
+    }
+
+    .account {
+        padding: 34px 0;
+        display: flex;
+        gap: 7%;
+    }
+
+    .opening_account__preface {
+        padding-right: 54%;
+    }
+}
